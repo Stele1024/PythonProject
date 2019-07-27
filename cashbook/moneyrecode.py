@@ -40,7 +40,7 @@ def get_when_now():
 
 # 创建文件夹
 def save_creat():
-    where = os.getcwd()
+    where = os.getcwd() # 获取当前目录的绝对路径
     when = get_when_now()
     save_creat_path = where + '/files/{years}/{month}/'.format(years=when[0], month=when[3])
     if when[1] == 1:
@@ -52,6 +52,7 @@ def save_creat():
 def first(save_creat_path):
     now = get_when_now()
     save_creat_path_01 = save_creat_path + now[4]
+    # 每一周创建一个文件储存
     if now[5] == 0:
         os.system('touch ' + save_creat_path_01)
         with open(save_creat_path_01, 'w') as a:
