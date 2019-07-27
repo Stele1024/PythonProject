@@ -41,5 +41,12 @@ example = {
                   [6]]
 
 
+# 个人信息保存的格式
+# 最外层是一个字典，包括两个键，分别bank_cards(银行卡),online_pay(在线支付)
+# 每个键的值是一个字典，可以添加若干个键，每个键对应的是一个列表，每个列表还能包括若干个列表，因为每个类型的帐号可能有多个帐号
+example = {
+          "bank_cards": {"icbc": [["types:-", "numbers:-", "phone:-"]]}, 
+          "online_pay": {"alipy": [["account:-", "password:-", "pay_password:-"]]}
+}
 
 
